@@ -4,3 +4,17 @@
   background-color: aqua;
   overflow-y: scroll;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttons-container {
+  display: flex;
+  padding-bottom: 50px;
+}

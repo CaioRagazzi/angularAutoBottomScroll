@@ -1,5 +1,15 @@
-<div #scrollDiv class="message-container">
-  <div #messages *ngFor="let message of messages">
-    <p>{{ message }}</p>
+<div class="container">
+  <div class="buttons-container">
+    <button (click)="toggleAutomaticMessages()">
+      {{ !automaticMessages ? "Start" : "Stop" }} automatic messages
+    </button>
+    <button *ngIf="showYouHaveNewMessagesButton()" (click)="scrollToBottom()">
+      You have new messages
+    </button>
+  </div>
+  <div #scrollDiv class="message-container" (scroll)="onScroll()">
+    <div #messages *ngFor="let message of messages">
+      <p>{{ message }}</p>
+    </div>
   </div>
 </div>
